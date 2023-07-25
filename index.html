@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+
+    <title>Painter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+       <div class="painter">
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <aside>
+                        <div class="row logo">
+                            <img style="width:20%" src="https://th.bing.com/th/id/R.1afda8e37551d579dbf83a78acaedf27?rik=8IjNCHwn2Nr8VQ&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fdownload_232966.png&ehk=ISIE9wUG1uVhN0l3oo%2bruWAH%2bH1Tb5TQzd3uBSNrJmU%3d&risl=&pid=ImgRaw&r=0">
+                            <h1 style="width:70%">Drawing</h1>
+                        </div>
+                       <div class="controller">
+                            <h3 class="title">Choose Color from Piker</h3>
+                            <span>Stroke color:</span>
+                            <div style="position: relative; width: 30%;margin: auto" class="shapefillcolor">
+                                <input style="width: 100%; " type="color" id="strokeColor"  value="black">
+                                <!-- <image style="position: absolute;width: 100%;inset: 0;"  src="https://cdn-icons-png.flaticon.com/512/2867/2867978.png" > -->
+                            </div>
+                            <br>
+                            <span>Fill color:</span>
+                            <div style="position: relative; width: 30%;margin: auto" class="shapefillcolor">
+                                <input style="width: 100%; " type="color" id="fillColor"  value="#FFFFFF">
+                                <!-- <image  style="position: absolute;width: 100%;inset: 0;"  src="https://cdn-icons-png.flaticon.com/512/2867/2867978.png" > -->
+                            </div>
+                       </div>
+                       <span>Controller:</span>
+                        <div class="Shapes">
+                            <button title="Free line" id="freeline">
+                                <svg width="100" height="50">
+                                    <path d="M 10,0
+                                        Q 150,0 0,0
+                                        Q 0,10 90,20
+                                        Q 80,30 0,20
+                                        Q 0,40 80,50
+                                        Q 0,50 0,60
+                                        Q 0,70 30,80
+                                    " stroke="black" stroke-width="3" style="fill:transparent">
+                                    </path>
+                                </svg>
+                            </button>
+                            <button title="Line" id="line">
+                                <svg width="100" height="50">
+                                    <path stroke="black"  stroke-width="3"  d="M5 10 L90 40"/> <!--startpointx,y,endpointx,y-->
+                                </svg>
+                            </button>
+                            <button title="Rectangle" id="rectangle">
+                                <svg width="100" height="50">
+                                    <rect width="80" x="10" y="6" stroke="black"  height="40" stroke-width="1" style="fill:transparent"></rect>
+                                </svg>
+                            </button>
+                            <button title="Circle" id="circle">
+                                <svg width="100" height="50">
+                                    <circle cx="50" cy="25" r="20" stroke="black"  stroke-width="1" style="fill:transparent"></circle>
+                                </svg>
+                            </button>
+                            <button title="Earser" id="earser">
+                                <svg width="100" height="50" >
+                                    <polygon points="70,0 80,20 30,50 20,30 " style="fill:tomato" stroke="black" stroke-width="2" ></polygon>
+                                    <polygon points="46,15 55,35 30,50 20,30 " style="fill:blue" stroke="black" stroke-width="2" ></polygon>
+                                </svg>
+                            </button>
+                        </div>
+                    </aside>
+                </div>
+                <div class="col-9">
+                    <div class="row">
+                        <!--Shapes-->
+
+                        <!--Canvas-->
+                        <canvas id="cvs" style="border:1px solid black;background-color: white;" width="1380"
+                        height="630">
+                    
+                        </canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+       </div>
+    </main>
+    <!--Script-->
+    <script src="main.js"></script>
+</body>
+</html>
